@@ -1,0 +1,120 @@
+Battery 0: Discharging, 56%, 03:39:38 remaining
+
+Traceback (most recent call last):
+  File "/home/usama/crons/battery_reminder/main.py", line 68, in <module>
+    main()
+  File "/home/usama/crons/battery_reminder/main.py", line 65, in main
+    battery_notifier(battery_percent, sound_command, notification_title)
+  File "/home/usama/crons/battery_reminder/main.py", line 40, in battery_notifier
+    notification.notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/facades/notification.py", line 84, in notify
+    self._notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/platforms/linux/notification.py", line 78, in _notify
+    session_bus = dbus.SessionBus()
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 209, in __new__
+    return Bus.__new__(cls, Bus.TYPE_SESSION, private=private,
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 99, in __new__
+    bus = BusConnection.__new__(subclass, bus_type, mainloop=mainloop)
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/bus.py", line 120, in __new__
+    bus = cls._new_for_bus(address_or_type, mainloop=mainloop)
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+Battery 0: Discharging, 55%, 03:35:10 remaining
+
+Traceback (most recent call last):
+  File "/home/usama/crons/battery_reminder/main.py", line 68, in <module>
+    main()
+  File "/home/usama/crons/battery_reminder/main.py", line 65, in main
+    battery_notifier(battery_percent, sound_command, notification_title)
+  File "/home/usama/crons/battery_reminder/main.py", line 40, in battery_notifier
+    notification.notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/facades/notification.py", line 84, in notify
+    self._notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/platforms/linux/notification.py", line 78, in _notify
+    session_bus = dbus.SessionBus()
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 209, in __new__
+    return Bus.__new__(cls, Bus.TYPE_SESSION, private=private,
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 99, in __new__
+    bus = BusConnection.__new__(subclass, bus_type, mainloop=mainloop)
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/bus.py", line 120, in __new__
+    bus = cls._new_for_bus(address_or_type, mainloop=mainloop)
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+Battery 0: Discharging, 54%, 05:40:22 remaining
+
+Traceback (most recent call last):
+  File "/home/usama/crons/battery_reminder/main.py", line 68, in <module>
+    main()
+  File "/home/usama/crons/battery_reminder/main.py", line 65, in main
+    battery_notifier(battery_percent, sound_command, notification_title)
+  File "/home/usama/crons/battery_reminder/main.py", line 40, in battery_notifier
+    notification.notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/facades/notification.py", line 84, in notify
+    self._notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/platforms/linux/notification.py", line 78, in _notify
+    session_bus = dbus.SessionBus()
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 209, in __new__
+    return Bus.__new__(cls, Bus.TYPE_SESSION, private=private,
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 99, in __new__
+    bus = BusConnection.__new__(subclass, bus_type, mainloop=mainloop)
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/bus.py", line 120, in __new__
+    bus = cls._new_for_bus(address_or_type, mainloop=mainloop)
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+Battery 0: Discharging, 53%, 05:13:26 remaining
+
+Traceback (most recent call last):
+  File "/home/usama/crons/battery_reminder/main.py", line 68, in <module>
+    main()
+  File "/home/usama/crons/battery_reminder/main.py", line 65, in main
+    battery_notifier(battery_percent, sound_command, notification_title)
+  File "/home/usama/crons/battery_reminder/main.py", line 40, in battery_notifier
+    notification.notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/facades/notification.py", line 84, in notify
+    self._notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/platforms/linux/notification.py", line 78, in _notify
+    session_bus = dbus.SessionBus()
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 209, in __new__
+    return Bus.__new__(cls, Bus.TYPE_SESSION, private=private,
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 99, in __new__
+    bus = BusConnection.__new__(subclass, bus_type, mainloop=mainloop)
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/bus.py", line 120, in __new__
+    bus = cls._new_for_bus(address_or_type, mainloop=mainloop)
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+Battery 0: Discharging, 52%, 02:56:12 remaining
+
+Traceback (most recent call last):
+  File "/home/usama/crons/battery_reminder/main.py", line 68, in <module>
+    main()
+  File "/home/usama/crons/battery_reminder/main.py", line 65, in main
+    battery_notifier(battery_percent, sound_command, notification_title)
+  File "/home/usama/crons/battery_reminder/main.py", line 40, in battery_notifier
+    notification.notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/facades/notification.py", line 84, in notify
+    self._notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/platforms/linux/notification.py", line 78, in _notify
+    session_bus = dbus.SessionBus()
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 209, in __new__
+    return Bus.__new__(cls, Bus.TYPE_SESSION, private=private,
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 99, in __new__
+    bus = BusConnection.__new__(subclass, bus_type, mainloop=mainloop)
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/bus.py", line 120, in __new__
+    bus = cls._new_for_bus(address_or_type, mainloop=mainloop)
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
+Battery 0: Discharging, 50%, 01:29:54 remaining
+
+Traceback (most recent call last):
+  File "/home/usama/crons/battery_reminder/main.py", line 68, in <module>
+    main()
+  File "/home/usama/crons/battery_reminder/main.py", line 65, in main
+    battery_notifier(battery_percent, sound_command, notification_title)
+  File "/home/usama/crons/battery_reminder/main.py", line 40, in battery_notifier
+    notification.notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/facades/notification.py", line 84, in notify
+    self._notify(
+  File "/home/usama/.local/lib/python3.10/site-packages/plyer/platforms/linux/notification.py", line 78, in _notify
+    session_bus = dbus.SessionBus()
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 209, in __new__
+    return Bus.__new__(cls, Bus.TYPE_SESSION, private=private,
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/_dbus.py", line 99, in __new__
+    bus = BusConnection.__new__(subclass, bus_type, mainloop=mainloop)
+  File "/home/usama/.local/lib/python3.10/site-packages/dbus/bus.py", line 120, in __new__
+    bus = cls._new_for_bus(address_or_type, mainloop=mainloop)
+dbus.exceptions.DBusException: org.freedesktop.DBus.Error.NotSupported: Unable to autolaunch a dbus-daemon without a $DISPLAY for X11
