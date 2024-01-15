@@ -3,6 +3,15 @@ import os
 import csv
 import time
 from plyer import notification
+import pygame
+
+
+# to make it work with CronJob
+os.environ['DISPLAY'] = ':0'
+os.environ['XAUTHORITY'] = '/home/usama/.Xauthority'
+
+dbus_session_bus_address = os.environ.get("DBUS_SESSION_BUS_ADDRESS")
+os.environ["DBUS_SESSION_BUS_ADDRESS"] = "unix:path=/run/user/1000/bus,guid=ed6a25fb05118cb5e2c8dca665a49d34"
 
 
 def parse_data(data):
@@ -35,16 +44,23 @@ def save_to_csv(data, filename='battery_data.csv'):
 
 def battery_notifier(battery_percent, sound_command, notification_title):
     notification_message = f"Level: {battery_percent}%"
-    notification_icon = os.path.join(os.getcwd(), "battery.png")
+    script_directory = os.path.dirname(os.path.abspath(__file__))
+    notification_icon = os.path.join(script_directory, "battery.png")
 
     notification.notify(
         title=notification_title,
         message=notification_message,
         app_name="Battery Monitor",
         app_icon=notification_icon,
-        timeout=10  # Notification timeout in seconds
+        timeout=3  # Notification timeout in seconds
     )
-    subprocess.run(sound_command, shell=True)
+    # os.system(f'notify-send "{notification_title}" "{notification_message}" -i {notification_icon}')
+
+    pygame.mixer.init()
+    pygame.mixer.music.load(sound_command)
+    pygame.mixer.music.play()
+    pygame.time.delay(3000)
+    pygame.mixer.music.stop()
 
 def main():
     battery_info = subprocess.check_output(["acpi", "-b"]).decode("utf-8")
@@ -56,11 +72,11 @@ def main():
     status = "Charging" in battery_info
     
     if status and battery_percent > 90:
-        sound_command = "paplay /usr/share/sounds/sound-icons/xylofon.wav"
+        sound_command = "usr/share/sounds/sound-icons/xylofon.wav"
         notification_title = "Battery Full"
         battery_notifier(battery_percent, sound_command, notification_title)
-    elif battery_percent < 80:
-        sound_command = "paplay --volume=65536 /usr/share/sounds/Yaru/stereo/battery-low.oga"
+    elif not status and battery_percent < 15:
+        sound_command = "/usr/share/sounds/Yaru/stereo/battery-low.oga"
         notification_title = "Battery Low"
         battery_notifier(battery_percent, sound_command, notification_title)
 
