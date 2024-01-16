@@ -52,7 +52,7 @@ def battery_notifier(battery_percent, sound_command, notification_title):
         message=notification_message,
         app_name="Battery Monitor",
         app_icon=notification_icon,
-        timeout=3  # Notification timeout in seconds
+        timeout=3
     )
     # os.system(f'notify-send "{notification_title}" "{notification_message}" -i {notification_icon}')
 
@@ -70,8 +70,9 @@ def main():
     save_to_csv(parsed_data)
 
     status = "Charging" in battery_info
+    full_status = "Full" in battery_info
     
-    if status and battery_percent > 90:
+    if status and battery_percent > 95:
         sound_command = "usr/share/sounds/sound-icons/xylofon.wav"
         notification_title = "Battery Full"
         battery_notifier(battery_percent, sound_command, notification_title)
@@ -79,6 +80,8 @@ def main():
         sound_command = "/usr/share/sounds/Yaru/stereo/battery-low.oga"
         notification_title = "Battery Low"
         battery_notifier(battery_percent, sound_command, notification_title)
-
+    if full_status:
+        pass
+    
 if __name__ == "__main__":
     main()
