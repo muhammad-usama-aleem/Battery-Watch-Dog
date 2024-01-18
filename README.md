@@ -38,8 +38,13 @@ pip install plyer
     ```bash
     python3 battery_watch_dog.py
     ```
+    Cronjob:
+   
+   ```bash
+   */5 * * * * export DISPLAY=:0 &&  /home/usama/crons/battery_reminder/run_battery_reminder.sh >> /home/usama/crons/battery_reminder/cron.log 2>&1
+   ```
 
-3. **Monitor the terminal for real-time battery information and check the `battery_data.csv` file for historical data.**
+4. **Monitor the terminal for real-time battery information and check the `battery_data.csv` file for historical data.**
 
 
 # Customization
